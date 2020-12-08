@@ -87,6 +87,7 @@ def cv2_demo(net, transform):
 
         # frame = cv2.imread("/workspace/zigangzhao/ssd.pytorch/test_images/000039.jpg")
         frame = predict(im)
+        frame = frame[:,:,[2,1,0]] ##BGR-->RGB
         IMAGE_SIZE = (12, 8)
         plt.figure(figsize=IMAGE_SIZE)
 
